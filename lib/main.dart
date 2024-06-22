@@ -1,10 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:pokemon/button.dart';
 import 'package:pokemon/characters/boy.dart';
 import 'package:pokemon/maps/littleroot.dart';
-import 'package:pokemon/characters/boy.dart';
 
 void main() {
   runApp(MyApp());
@@ -31,25 +28,33 @@ class _HomePageState extends State<HomePage> {
   double mapX = 0;
   double mapY = 0;
 
+  // boy character
+  int boySpriteCount = 0;
+  String boyDirection = 'Down';
+
   // game stuff
   String currentLocation = 'littleroot';
 
   void moveDown(){
+    boyDirection = 'Down';
     setState(() {
       mapY -= 0.2;
     });
   }
   void moveUp(){
+    boyDirection = 'Up';
     setState(() {
       mapY += 0.2;
     });
   }
   void moveLeft(){
+    boyDirection = 'Left';
     setState(() {
       mapX += 0.2;
     });
   }
   void moveRight(){
+    boyDirection = 'Right';
     setState(() {
       mapX -= 0.2;
     });
@@ -81,7 +86,11 @@ class _HomePageState extends State<HomePage> {
                  // character boy
                  Container(
                   alignment: Alignment(0,0),
-                  child: MyBoy(),
+                  child: MyBoy(
+                    location: currentLocation,
+                    boySpriteCount: boySpriteCount,
+                    direction: boyDirection,
+                  ),
                  )
                 ],
               ),
