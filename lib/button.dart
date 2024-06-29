@@ -4,7 +4,7 @@ class MyButton extends StatelessWidget {
   final text;
   final function;
 
-  MyButton({this.text, this.function});
+  const MyButton({super.key, this.text, this.function});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class MyButton extends StatelessWidget {
           child: Center(
             child:Text(
             text,
-            style: TextStyle(color: Colors.white,fontSize: 20),
+            style: const TextStyle(color: Colors.white,fontSize: 20),
             ),
           ),
         ),

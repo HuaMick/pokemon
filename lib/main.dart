@@ -4,13 +4,15 @@ import 'package:pokemon/characters/boy.dart';
 import 'package:pokemon/maps/littleroot.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context){
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: HomePage(),
     );
@@ -18,6 +20,8 @@ class MyApp extends StatelessWidget {
 }
 
 class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
   @override
   _HomePageState createState() => _HomePageState();
 }
@@ -85,7 +89,7 @@ class _HomePageState extends State<HomePage> {
                 
                  // character boy
                  Container(
-                  alignment: Alignment(0,0),
+                  alignment: const Alignment(0,0),
                   child: MyBoy(
                     location: currentLocation,
                     boySpriteCount: boySpriteCount,
@@ -104,7 +108,7 @@ class _HomePageState extends State<HomePage> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
+                    const Text(
                       'G A M E B O Y', 
                       style: TextStyle(color: Colors.white),
                     ),
@@ -117,7 +121,7 @@ class _HomePageState extends State<HomePage> {
                               children: [
                                 Column(
                                   children: [
-                                    Container(
+                                    const SizedBox(
                                       height: 50,
                                       width: 50,
                                     ),
@@ -125,7 +129,7 @@ class _HomePageState extends State<HomePage> {
                                       text: '←',
                                       function: moveLeft,
                                     ),
-                                    Container(
+                                    const SizedBox(
                                       height: 50,
                                       width: 50,
                                     ),                                                                        
@@ -137,7 +141,7 @@ class _HomePageState extends State<HomePage> {
                                       text: '↑',
                                       function: moveUp,
                                     ),
-                                    Container(
+                                    const SizedBox(
                                       height: 50,
                                       width: 50,
                                     ),
@@ -149,7 +153,7 @@ class _HomePageState extends State<HomePage> {
                                 ),
                                 Column(
                                   children: [
-                                    Container(
+                                    const SizedBox(
                                       height: 50,
                                       width: 50,
                                     ),
@@ -157,7 +161,7 @@ class _HomePageState extends State<HomePage> {
                                       text: '→',
                                       function: moveRight,
                                     ),
-                                    Container(
+                                    const SizedBox(
                                       height: 50,
                                       width: 50,
                                     ),                                                                        
@@ -171,7 +175,7 @@ class _HomePageState extends State<HomePage> {
                           children: [
                             Column(
                               children: [
-                                Container(
+                                const SizedBox(
                                   height: 50,
                                   width: 50,
                                 ),
@@ -187,7 +191,7 @@ class _HomePageState extends State<HomePage> {
                                   text: 'b',
                                   function: pressedB,
                                 ),
-                                Container(
+                                const SizedBox(
                                   height: 50,
                                   width: 50,
                                 ),
@@ -197,7 +201,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ],
                     ),
-                    Text(
+                    const Text(
                       'C R E A T E D B Y R I C E B O Y',
                       style: TextStyle(color: Colors.white)
                       ),

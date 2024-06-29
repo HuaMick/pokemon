@@ -5,7 +5,7 @@ class LittleRoot extends StatelessWidget {
   double y;
   String currentMap;
 
-  LittleRoot({required this.x, required this.y, required this.currentMap});
+  LittleRoot({super.key, required this.x, required this.y, required this.currentMap});
 
   @override
   Widget build(BuildContext context) {

@@ -6,7 +6,7 @@ class MyBoy extends StatelessWidget {
   final String location;
   double height = 20;
 
-  MyBoy({
+  MyBoy({super.key, 
     required this.boySpriteCount, 
     required this.direction, 
     required this.location});
@@ -23,10 +23,10 @@ class MyBoy extends StatelessWidget {
       height = 0;
     }
 
-    return Container(
+    return SizedBox(
       height: height,
       child: Image.asset(
-        'lib/images/boy' + direction + boySpriteCount.toString() + '.png',
+        'lib/images/boy$direction$boySpriteCount.png',
         fit: BoxFit.cover),
     );
   }
